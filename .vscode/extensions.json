@@ -1,0 +1,21 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "formulahendry.code-runner",
+        "codesandbox-io.codesandbox-projects",
+        "dsznajder.es7-react-js-snippets",
+        "dbaeumer.vscode-eslint",
+        "github.copilot",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "riazxrazor.html-to-jsx",
+        "ritwickdey.liveserver",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        "bierner.markdown-preview-github-styles",
+        "davidanson.vscode-markdownlint",
+        "vscodeshift.mui-snippets",
+        "lostfields.nodejs-repl",
+        "christian-kohler.npm-intellisense"
+    ]
+}
