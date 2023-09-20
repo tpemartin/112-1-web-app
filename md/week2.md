@@ -132,3 +132,5 @@ JS that has jsx element should have an extension `.jsx`. However, use `.js` will
 # Card example
 
   * [Card](https://www.w3schools.com/howto/howto_css_cards.asp)
+
+  * [JSON](https://www.w3schools.com/js/js_json_intro.asp)
