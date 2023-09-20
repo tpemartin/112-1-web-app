@@ -128,3 +128,7 @@ Difference between `dev` and `build` is that `dev` will keep watching your code 
 ## .js and .jsx
 
 JS that has jsx element should have an extension `.jsx`. However, use `.js` will work. But in a strict environment setting you must use `.jsx`.
+
+# Card example
+
+  * [Card](https://www.w3schools.com/howto/howto_css_cards.asp)
