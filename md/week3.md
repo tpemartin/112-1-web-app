@@ -76,7 +76,7 @@ export default function BoxSx() {
 
 Copy and paste it to
 
-![](../../demo-repo/web-app/img/box%20folder.png)
+![](../../img/box%20folder.png)
 
 # Stacking
 
@@ -90,5 +90,5 @@ Copy and paste it to
 
 [Theme Creator](https://zenoo.github.io/mui-theme-creator/)
 
-![](../../demo-repo/web-app/img/uncheck%20typescript.png)
+![](../../img/uncheck%20typescript.png)
 
