@@ -140,3 +140,92 @@ function ImagePanel_fixedContent() {
 ```
 
   - [height css](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
+
+## Final result
+
+Module `index.jsx`
+
+```jsx
+import { Stack, Typography, Box } from "@mui/material";
+
+
+export default function OfficeInformation() {
+    return (
+        <Stack direction="row" spacing={2}>
+            <ImagePanel_fixedContent />
+            <InfoPanel
+                officeHour="Thu. 12:00 - 14:00"
+                email="guowc@gm.ntpu.edu.tw"
+                phone="886-2-86741111 ext. 67156"
+                office="社3F16" />
+        </Stack>
+    )
+}
+ function ImagePanel_fixedContent() {
+    return (
+        <Stack direction="column" spacing={2}>
+            <Box sx={{ width: "200px", height: "100%" }}>
+                <img src="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg"
+                    alt="image" width="100%" />
+            </Box>
+            <Typography variant="h6">
+                郭文宗 教授
+            </Typography>
+        </Stack>
+    )
+}
+
+
+ function InfoPanel({ officeHour, email, phone, office }) {
+    return (
+        <>
+            <Stack direction="column" spacing={2}>
+                <InfoPanel_variableContent title="Office Hours" content={officeHour} />
+                <InfoPanel_variableContent title="Email" content={email} />
+                <InfoPanel_variableContent title="Phone" content={phone} />
+                <InfoPanel_variableContent title="Office" content={office} />
+            </Stack>
+        </>
+    )
+}
+ function InfoPanel_variableContent({ title, content }) {
+    return (
+        <Stack direction="column" spacing={2}>
+            <Typography variant="h6">
+                {title}
+            </Typography>
+            <Typography variant="body1">
+                {content}
+            </Typography>
+        </Stack>
+    )
+}
+```
+
+`App.jsx`
+
+```jsx
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import OfficeInformation from './components/OfficeInformation/OfficeInfo.jsx'
+function App() {
+  
+  return (
+  <>
+   <OfficeInformation
+      imgLink="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg"
+      name = "郭文宗 教授"
+      officeHour="Thu. 12:00 - 14:00"
+      email="guowc@gm.ntpu.edu.tw"
+      phone="886-2-86741111 ext. 67156"
+      office="社3F16"          
+                />
+  </>
+  )
+}
+
+export default App
+
+```
