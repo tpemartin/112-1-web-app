@@ -7,6 +7,11 @@ Creating a New Workspace in VS Code
 
 # Project setup 
 
+We are going to create a React project with Vite development environment.
+
+  1. First create a project folder, and open it in vscode. Open project in your vscode. 
+  2. Click ![](../img/toggle%20panels.png) and navigate to terminal, type:  
+  3. 
   * React+Vite project: `npm create vite@latest . -- --template react`
   * Install dependencies: `npm install`
   
