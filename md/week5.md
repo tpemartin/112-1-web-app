@@ -5,6 +5,46 @@
 
 # Stacking (堆疊)
 
+## One component
+
+### specific info
+
+[![](../img/specific%20info.png)](https://www.figma.com/file/79Qn6m4sEy7CE8Z30OS80h/lecture-notes?type=design&node-id=24-49&mode=design&t=GFFJkKeslmAAz6Kt-4)
+
+```jsx
+function InfoPanel_fixedContent() {
+    return (
+        <Stack direction="column" spacing={2}>
+            <Typography variant="h6">
+                Office Hours
+            </Typography>
+            <Typography variant="body1">
+                Thu. 12:00 - 14:00
+            </Typography>
+        </Stack>
+    )
+}
+```
+
+### general info
+
+[![](../img/general%20info.png)](https://www.figma.com/file/79Qn6m4sEy7CE8Z30OS80h/lecture-notes?type=design&node-id=24-50&mode=design&t=GFFJkKeslmAAz6Kt-4)
+
+```jsx
+function InfoPanel_variableContent({title, content}) {
+    return (
+        <Stack direction="column" spacing={2} sx={{alignItems: "center"}}>
+            <Typography variant="h6">
+                {title}
+            </Typography>
+            <Typography variant="body1">
+                {content}
+            </Typography>
+        </Stack>
+    )
+}
+``````
+
 ## Stacking adjustment
 
 ![](../img/stacking%20adjustment.png)
