@@ -33,7 +33,7 @@ function InfoPanel_fixedContent() {
 ```jsx
 function InfoPanel_variableContent({title, content}) {
     return (
-        <Stack direction="column" spacing={2} sx={{alignItems: "center"}}>
+        <Stack direction="column" spacing={2}>
             <Typography variant="h6">
                 {title}
             </Typography>
@@ -43,14 +43,25 @@ function InfoPanel_variableContent({title, content}) {
         </Stack>
     )
 }
-``````
+```
 
 ## Stacking adjustment
+
+To fine tune the style of the component, we can use the browser's developer tool.
+
+- Run `npm run dev` to see the live view of your app. 
+
+- Right click on the component and select "Inspect" to open the developer tool.
 
 ![](../img/stacking%20adjustment.png)
 
 - element selected will be highlighted in the browser.  
 - "Styles" tab shows the CSS rules applied to the element.
+
+### Flex box
+
+- MUI Stack component uses [flex box](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to stack the items.   
+- In chrome developer tool, flex box will be marked with a special icon as below.  
 
 ![](../img/display%20flex.png)
 
@@ -62,5 +73,55 @@ function InfoPanel_variableContent({title, content}) {
 ```
 
   * sx: style system in Material UI. Its a prop that allows us to pass in CSS rules as an object.
+  * style name used to be in snake style needs to be in camel style. For example, `align-items` becomes `alignItems`.
 
 > In js, an object is a collection of key-value pairs. For example, `{name: "John", age: 30}` is an object.
+>
+
+## Stacking further
+
+![](../img/stacking%20further.png)
+
+```jsx
+function InfoOnDoor_fixedContent(){
+    return (
+        <Stack direction="column" spacing={2}>
+            <InfoPanel_variableContent title="Office Hours" content="Thu. 12:00 - 14:00" />
+            <InfoPanel_variableContent title="Email" content="guowc@gm.ntpu.edu.tw" />
+            <InfoPanel_variableContent title="Phone" content="886-2-86741111#66100" />  
+            <InfoPanel_variableContent title="Office" content="社科院 3F16" />
+        </Stack>
+    )
+}
+```
+
+## Image panel stacking
+  
+  - `<img>` tag: <https://www.w3schools.com/tags/tag_img.asp>  
+  - image link: <https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg>
+
+```jsx
+<Stack direction="column" spacing={2}>
+    <img src="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg" 
+    alt="image" width="100%" height="100%" />
+    <Typography variant="h6">
+        郭文宗 教授
+    </Typography>
+</Stack>
+```
+
+> Need to confine image within a certin size. We can use `Box` component to do that.
+
+```jsx
+<Stack direction="column" spacing={2}>
+    <Box sx={{ width: "200px", height: "100%" }}>
+        <img src="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg"
+            alt="image" width="100%" height="100%" />
+    </Box>
+    <Typography variant="h6">
+        郭文宗 教授
+    </Typography>
+</Stack>
+```
+
+  - [height css](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
