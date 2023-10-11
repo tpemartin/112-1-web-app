@@ -3,6 +3,10 @@
 
 [![](../img/officeInfo.png) ](https://www.figma.com/file/79Qn6m4sEy7CE8Z30OS80h/lecture-notes?type=design&node-id=17-19&mode=design&t=GFFJkKeslmAAz6Kt-4)
 
+
+  - [Full time faculty](https://econ.ntpu.edu.tw/en/teachers/5)
+
+
 # Stacking (堆疊)
 
 ## One component
