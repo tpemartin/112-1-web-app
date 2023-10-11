@@ -96,32 +96,43 @@ function InfoOnDoor_fixedContent(){
 ```
 
 ## Image panel stacking
+
+![](../img/image%20panel.png)
   
   - `<img>` tag: <https://www.w3schools.com/tags/tag_img.asp>  
   - image link: <https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg>
 
 ```jsx
-<Stack direction="column" spacing={2}>
-    <img src="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg" 
-    alt="image" width="100%" height="100%" />
-    <Typography variant="h6">
-        郭文宗 教授
-    </Typography>
-</Stack>
+function ImagePanel_fixedContent() {
+    return (
+      <Stack direction="column" spacing={2}>
+          <img src="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg" 
+          alt="image" width="100%" height="100%" />
+          <Typography variant="h6">
+              郭文宗 教授
+          </Typography>
+      </Stack>
+    )
+}
+
 ```
 
 > Need to confine image within a certin size. We can use `Box` component to do that.
 
 ```jsx
-<Stack direction="column" spacing={2}>
-    <Box sx={{ width: "200px", height: "100%" }}>
-        <img src="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg"
-            alt="image" width="100%" height="100%" />
-    </Box>
-    <Typography variant="h6">
-        郭文宗 教授
-    </Typography>
-</Stack>
+function ImagePanel_fixedContent() {
+    return (
+        <Stack direction="column" spacing={2}>
+            <Box sx={{ width: "200px", height: "100%" }}>
+                <img src="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg"
+                    alt="image" width="100%" height="100%" />
+            </Box>
+            <Typography variant="h6">
+                郭文宗 教授
+            </Typography>
+        </Stack>
+    )
+}
 ```
 
   - [height css](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
