@@ -7,7 +7,7 @@ Creating a New Workspace in VS Code
 
 # Project setup 
 
-  * React+Vite project: `npm create vite@latest . -- --template react
+  * React+Vite project: `npm create vite@latest . -- --template react`
   * Install dependencies: `npm install`
   
 ## MUI framework
