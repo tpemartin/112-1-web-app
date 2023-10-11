@@ -149,27 +149,29 @@ Module `index.jsx`
 import { Stack, Typography, Box } from "@mui/material";
 
 
-export default function OfficeInformation() {
+export default function OfficeInformation({imgLink, name ,officeHour, email, phone, office}) {
     return (
-        <Stack direction="row" spacing={2}>
-            <ImagePanel_fixedContent />
-            <InfoPanel
-                officeHour="Thu. 12:00 - 14:00"
-                email="guowc@gm.ntpu.edu.tw"
-                phone="886-2-86741111 ext. 67156"
-                office="社3F16" />
-        </Stack>
-    )
+        <>
+          <Stack direction="row" spacing={2}>
+            <ImagePanel_fixedContent imgLink={imgLink} name={name}/>
+            <InfoPanel officeHour={officeHour} email={email}
+                phone={phone}
+                office={office}/>
+          </Stack>
+        </>
+      )
 }
- function ImagePanel_fixedContent() {
+
+
+ function ImagePanel_fixedContent({imgLink, name}) {
     return (
         <Stack direction="column" spacing={2}>
             <Box sx={{ width: "200px", height: "100%" }}>
-                <img src="https://econ.ntpu.edu.tw/storage/images/ZlP7DHjLRh8IeahmFoT1EMxkmCgaxYtguN76FqiW.jpg"
+                <img src={imgLink}
                     alt="image" width="100%" />
             </Box>
             <Typography variant="h6">
-                郭文宗 教授
+                {name} 教授
             </Typography>
         </Stack>
     )
@@ -200,6 +202,7 @@ export default function OfficeInformation() {
         </Stack>
     )
 }
+
 ```
 
 `App.jsx`
@@ -209,7 +212,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import OfficeInformation from './components/OfficeInformation/OfficeInfo.jsx'
+import OfficeInformation from './components/OfficeInformation'
 function App() {
   
   return (
@@ -227,5 +230,6 @@ function App() {
 }
 
 export default App
+
 
 ```
