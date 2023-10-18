@@ -70,6 +70,8 @@ function Name_Email_Phone({ name, title, email, phone }) {
 }
 ```
 
+  - [MUI icons](https://mui.com/components/material-icons/)
+
 ## `<OutOfOffice>`
 
 ![](../img/OutOfOffice.png)
