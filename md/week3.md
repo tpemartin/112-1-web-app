@@ -31,6 +31,13 @@ npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material
 ```
 
+or 
+
+
+```bash
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+```
+
 # MUI
 
 ![](../img/components.png)
