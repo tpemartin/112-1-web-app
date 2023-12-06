@@ -20,7 +20,7 @@ Here's an example of how the code might look:
 ```javascript
 function doGet() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = spreadsheet.getActiveSheet();
+  var sheet = spreadsheet.getSheetByName("Sheet1");
   var dataRange = sheet.getDataRange();
   var values = dataRange.getValues();
 
